@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+p{
+    color: rgb(165, 162, 162);
+    text-align: center;
+}
