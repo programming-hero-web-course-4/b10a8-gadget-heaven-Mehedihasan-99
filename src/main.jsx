@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MainLayout from './components/MainLayout/MainLayout.jsx'
 import Home from './components/Home/Home.jsx'
 import Error from './components/Error/Error.jsx'
+import Gadgets from './components/Gadgets/Gadgets.jsx'
+import GadgetDetail from './components/GadgetDetail/GadgetDetail.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,11 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+      },
+      {
+        path:'/gadget/:id',
+        element: <GadgetDetail/>,
+        loader: () => fetch(`gadgetsData.json`)
       },
       {
         path: '/statistics',

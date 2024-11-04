@@ -11,38 +11,36 @@ const Navbar = () => {
         <li><NavLink to="/dashboard">Dashboard</NavLink></li>
     </>
     return (
-        <div className="bg-white">
-            <div className="navbar max-w-6xl mx-auto">
-                <div className="navbar-start p-0">
-                    <div className="dropdown md:hidden">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <IoMenuSharp className="text-2xl"></IoMenuSharp>
-                        </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            {links}
-                        </ul>
+        <div className="navbar  max-w-6xl mx-auto">
+            <div className="navbar-start p-0">
+                <div className="dropdown md:hidden">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <IoMenuSharp className="text-2xl"></IoMenuSharp>
                     </div>
-                    <button className="btn btn-ghost text-xl font-bold p-0"><NavLink to="/">GADGET Haven</NavLink></button>
-                </div>
-                <div className="navbar-center hidden md:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul
+                        tabIndex={0}
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-                        <div className="indicator bg-white p-2 rounded-full">
-                            <TiShoppingCart className="text-xl"></TiShoppingCart>
-                            <span className="badge badge-sm indicator-item">0</span>
-                        </div>
+                <button className="btn btn-ghost text-xl font-bold p-0"><NavLink to="/">GADGET Haven</NavLink></button>
+            </div>
+            <div className="navbar-center hidden md:flex">
+                <ul className="menu menu-horizontal px-1">
+                    {links}
+                </ul>
+            </div>
+            <div className="navbar-end">
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                    <div className="indicator bg-white p-2 rounded-full">
+                        <TiShoppingCart className="text-xl"></TiShoppingCart>
+                        <span className="badge badge-sm indicator-item">0</span>
                     </div>
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-                        <div className="indicator bg-white p-2 rounded-full">
-                            <IoHeartOutline className="text-xl"></IoHeartOutline>
-                            <span className="badge badge-sm indicator-item">0</span>
-                        </div>
+                </div>
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                    <div className="indicator bg-white p-2 rounded-full">
+                        <IoHeartOutline className="text-xl"></IoHeartOutline>
+                        <span className="badge badge-sm indicator-item">0</span>
                     </div>
                 </div>
             </div>

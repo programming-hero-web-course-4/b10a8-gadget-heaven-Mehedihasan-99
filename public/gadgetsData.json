@@ -7,10 +7,10 @@
       "category": "computers",
       "description": "High-performance laptop with 16GB RAM, 1TB SSD, and 4K UHD display.",
       "specification": [
-        {"key": "Processor", "value": "Intel i7"},
-        {"key": "RAM", "value": "16GB"},
-        {"key": "Storage", "value": "1TB SSD"},
-        {"key": "Display", "value": "15.6-inch 4K UHD"}
+        "Processor:Intel i7",
+        "RAM: 16GB", 
+        "Storage: 1TB SSD",
+        "Display: 15.6-inch 4K UHD"
       ],
       "availability": true,
       "rating": 4.8,
@@ -25,10 +25,10 @@
       "category": "phones",
       "description": "Next-gen smartphone with dual-camera setup, 128GB storage, and 5G support.",
       "specification": [
-        {"key": "Screen Size", "value": "6.5 inches"},
-        {"key": "Camera", "value": "12MP dual"},
-        {"key": "Battery", "value": "4000mAh"},
-        {"key": "Connectivity", "value": "5G"}
+        "Screen Size: 6.5 inches",
+        "Camera: 12MP dual",
+        "Battery: 4000mAh",
+        "Connectivity: 5G"
       ],
       "availability": true,
       "rating": 4.6,
@@ -43,10 +43,10 @@
       "category": "smart watches",
       "description": "Feature-rich smart watch with fitness tracking, heart rate monitor, and GPS.",
       "specification": [
-        {"key": "Display", "value": "1.5-inch AMOLED"},
-        {"key": "Battery Life", "value": "10 days"},
-        {"key": "Water Resistance", "value": "50m"},
-        {"key": "GPS", "value": "Yes"}
+        "Display: 1.5-inch AMOLED",
+        "Battery Life: 10 days",
+        "Water Resistance: 50m",
+        "GPS: Yes"
       ],
       "availability": false,
       "rating": 4.3,
@@ -61,10 +61,10 @@
       "category": "chargers",
       "description": "Compact fast charger with dual USB ports and quick charge technology.",
       "specification": [
-        {"key": "Output", "value": "18W"},
-        {"key": "Ports", "value": "Dual USB"},
-        {"key": "Compatibility", "value": "Universal"},
-        {"key": "Quick Charge", "value": "3.0"}
+        "Output: 18W",
+        "Ports: Dual USB",
+        "Compatibility: Universal",
+        "Quick Charge: 3.0"
       ],
       "availability": true,
       "rating": 4.7,
@@ -79,10 +79,10 @@
       "category": "power banks",
       "description": "High-capacity power bank with dual USB output and fast charging support.",
       "specification": [
-        {"key": "Capacity", "value": "20000mAh"},
-        {"key": "Output", "value": "Dual USB"},
-        {"key": "Charging Time", "value": "5 hours"},
-        {"key": "Fast Charging", "value": "Yes"}
+        "Capacity: 20000mAh",
+        "Output: Dual USB",
+        "Charging Time: 5 hours",
+        "Fast Charging: Yes"
       ],
       "availability": true,
       "rating": 4.9,
@@ -97,10 +97,10 @@
       "category": "computers",
       "description": "High-end gaming desktop with NVIDIA GTX graphics card and 32GB RAM.",
       "specification": [
-        {"key": "Processor", "value": "AMD Ryzen 9"},
-        {"key": "RAM", "value": "32GB"},
-        {"key": "Storage", "value": "1TB SSD + 2TB HDD"},
-        {"key": "Graphics", "value": "NVIDIA GTX 3080"}
+        "Processor: AMD Ryzen 9",
+        "RAM: 32GB",
+        "Storage: 1TB SSD + 2TB HDD",
+        "Graphics: NVIDIA GTX 3080"
       ],
       "availability": true,
       "rating": 4.9,
@@ -115,10 +115,10 @@
       "category": "phones",
       "description": "Affordable smartphone with 64GB storage, 13MP camera, and long-lasting battery.",
       "specification": [
-        {"key": "Screen Size", "value": "6.1 inches"},
-        {"key": "Camera", "value": "13MP"},
-        {"key": "Battery", "value": "3000mAh"},
-        {"key": "Storage", "value": "64GB"}
+        "Screen Size: 6.1 inches",
+        "Camera: 13MP",
+        "Battery: 3000mAh",
+        "Storage: 64GB"
       ],
       "availability": true,
       "rating": 4.0,
@@ -133,10 +133,10 @@
       "category": "smart watches",
       "description": "Premium smart watch with sapphire crystal, advanced health monitoring, and cellular capability.",
       "specification": [
-        {"key": "Display", "value": "1.8-inch OLED"},
-        {"key": "Battery Life", "value": "5 days"},
-        {"key": "Water Resistance", "value": "50m"},
-        {"key": "Cellular", "value": "Yes"}
+        "Display: 1.8-inch OLED",
+        "Battery Life: 5 days",
+        "Water Resistance: 50m",
+        "Cellular: Yes"
       ],
       "availability": true,
       "rating": 4.8,
@@ -151,10 +151,10 @@
       "category": "chargers",
       "description": "Convenient wireless charger with fast charging for cars, compatible with most devices.",
       "specification": [
-        {"key": "Output", "value": "15W"},
-        {"key": "Mount Type", "value": "Vent Mount"},
-        {"key": "Compatibility", "value": "Qi-enabled devices"},
-        {"key": "Fast Charging", "value": "Yes"}
+        "Output: 15W",
+        "Mount Type: Vent Mount",
+        "Compatibility: Qi-enabled devices",
+        "Fast Charging: Yes"
       ],
       "availability": false,
       "rating": 4.4,
@@ -169,10 +169,10 @@
       "category": "power banks",
       "description": "Portable and compact 10000mAh power bank with dual output and LED indicator.",
       "specification": [
-        {"key": "Capacity", "value": "10000mAh"},
-        {"key": "Output", "value": "Dual USB"},
-        {"key": "Charging Time", "value": "3 hours"},
-        {"key": "Fast Charging", "value": "Yes"}
+        "Capacity: 10000mAh",
+        "Output: Dual USB",
+        "Charging Time: 3 hours",
+        "Fast Charging: Yes"
       ],
       "availability": true,
       "rating": 4.5,
@@ -187,10 +187,10 @@
       "category": "computers",
       "description": "Versatile 2-in-1 laptop with touch screen and stylus support.",
       "specification": [
-        {"key": "Processor", "value": "Intel i5"},
-        {"key": "RAM", "value": "8GB"},
-        {"key": "Storage", "value": "512GB SSD"},
-        {"key": "Display", "value": "13.3-inch Full HD"}
+        "Processor: Intel i5",
+        "RAM: 8GB",
+        "Storage: 512GB SSD",
+        "Display: 13.3-inch Full HD"
       ],
       "availability": true,
       "rating": 4.5,
@@ -205,10 +205,10 @@
       "category": "computers",
       "description": "High-power workstation for professional design and 3D rendering.",
       "specification": [
-        {"key": "Processor", "value": "Intel Xeon"},
-        {"key": "RAM", "value": "64GB"},
-        {"key": "Storage", "value": "2TB SSD"},
-        {"key": "Graphics", "value": "NVIDIA Quadro RTX 4000"}
+        "Processor: Intel Xeon",
+        "RAM: 64GB",
+        "Storage: 2TB SSD",
+        "Graphics: NVIDIA Quadro RTX 4000"
       ],
       "availability": true,
       "rating": 4.9,
@@ -223,10 +223,10 @@
       "category": "computers",
       "description": "Affordable laptop with basic features for everyday use.",
       "specification": [
-        {"key": "Processor", "value": "Intel Pentium"},
-        {"key": "RAM", "value": "4GB"},
-        {"key": "Storage", "value": "128GB SSD"},
-        {"key": "Display", "value": "14-inch HD"}
+        "Processor:Intel Pentium",
+        "RAM: 4GB",
+        "Storage: 128GB SSD",
+        "Display: 14-inch HD"
       ],
       "availability": true,
       "rating": 3.9,
@@ -241,10 +241,10 @@
       "category": "phones",
       "description": "High-end smartphone with exceptional camera and display.",
       "specification": [
-        {"key": "Screen Size", "value": "6.8 inches"},
-        {"key": "Camera", "value": "48MP triple"},
-        {"key": "Battery", "value": "4500mAh"},
-        {"key": "Storage", "value": "256GB"}
+        "Screen Size: 6.8 inches",
+        "Camera: 48MP triple",
+        "Battery: 4500mAh",
+        "Storage: 56GB"
       ],
       "availability": true,
       "rating": 4.9,
@@ -259,10 +259,10 @@
       "category": "phones",
       "description": "Simple feature phone with basic call and text functionality.",
       "specification": [
-        {"key": "Screen Size", "value": "2.4 inches"},
-        {"key": "Camera", "value": "2MP"},
-        {"key": "Battery", "value": "1500mAh"},
-        {"key": "Storage", "value": "8GB"}
+        "Screen Size: 2.4 inches",
+        "Camera: 2MP",
+        "Battery: 1500mAh",
+        "Storage: 8GB"
       ],
       "availability": true,
       "rating": 3.5,

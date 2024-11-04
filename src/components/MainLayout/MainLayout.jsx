@@ -6,11 +6,13 @@ import { Outlet } from 'react-router-dom';
 const MainLayout = () => {
     return (
         <div className='bg-base-200'>
-            <Navbar />
-            <div className='min-h-[calc(100vh-541px)]'>
-                <Outlet />
+            <div className='relative'>
+                <div className='absolute w-full'><Navbar /></div>
+                <div className='min-h-[calc(100vh-541px)]'>
+                    <Outlet />
+                </div>
+                <Footer />
             </div>
-            <Footer />
         </div>
     );
 };
