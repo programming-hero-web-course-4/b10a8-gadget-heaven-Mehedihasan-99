@@ -16,17 +16,17 @@ const GadgetDetail = () => {
     // console.log(typeof rating)
 
     return (
-        <div className='pt-[68px] mb-96 bg-gray-200'>
+        <div className='pt-[68px] mb-[780px] md:mb-72 lg:mb-96 bg-gray-200'>
             <div className='bg-purple-700 h-[400px]'>
-                <div className='max-w-6xl mx-auto space-y-8'>
+                <div className='p-4 lg:p-0 max-w-6xl mx-auto space-y-8'>
                     <div className='space-y-4 text-center w-3/4 mx-auto'>
                         <h2 className='text-[32px] font-bold text-white'>Product Details</h2>
                         <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                     </div>
-                    <div className='flex gap-8  bg-white p-8 rounded-3xl'>
+                    <div className='flex flex-col md:flex-row gap-8 bg-white p-4 lg:p-8 rounded-3xl'>
                         <img src={image} alt="" className='rounded-2xl w-[430px]' />
-                        <div className='flex flex-col gap-4 justify-start items-start'>
-                            <div className='space-y-3 font-semibold'>
+                        <div className='flex flex-col gap-4 items-center justify-start md:items-start'>
+                            <div className='text-center space-y-3 font-semibold'>
                                 <h2 className='text-3xl'>{title}</h2>
                                 <h3 className='text-xl'>Price: ${price}</h3>
                             </div>
