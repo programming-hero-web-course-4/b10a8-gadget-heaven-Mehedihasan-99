@@ -3,17 +3,16 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { IoIosStar, IoIosStarHalf, IoIosStarOutline } from "react-icons/io";
 import { IoHeartOutline } from "react-icons/io5";
 import { TiShoppingCart } from "react-icons/ti";
+import { addToCart, addToWishList, getStoredWishList } from '../../utility/addToLocalStorage';
+
 
 const GadgetDetail = () => {
 
     const { id } = useParams();
-    const gadgetId = parseInt(id);
     const gadgets = useLoaderData();
 
     const gadget = gadgets.find(gadget => gadget.id == id);
     const { title, price, image, availability, specification, rating, description } = gadget;
-
-    // console.log(typeof rating)
 
     return (
         <div className='pt-[68px] mb-[780px] md:mb-72 lg:mb-96 bg-gray-200'>
@@ -26,11 +25,11 @@ const GadgetDetail = () => {
                     <div className='flex flex-col md:flex-row gap-8 bg-white p-4 lg:p-8 rounded-3xl'>
                         <img src={image} alt="" className='rounded-2xl w-[430px]' />
                         <div className='flex flex-col gap-4 items-center justify-start md:items-start'>
-                            <div className='text-center space-y-3 font-semibold'>
+                            <div className='text-center md:text-start space-y-3 font-semibold'>
                                 <h2 className='text-3xl'>{title}</h2>
                                 <h3 className='text-xl'>Price: ${price}</h3>
                             </div>
-                            <button className='border border-green-500 rounded-full px-4'>{`${availability ? 'In Stock' : 'Out of Stock'}`}</button>
+                            <button className='border border-green-500 rounded-full px-4'>{availability ? 'In Stock' : 'Out of Stock'}</button>
                             <p>{description}</p>
                             <div className='space-y-3'>
                                 <h4 className='font-bold text-lg'>Specification:</h4>
@@ -52,8 +51,8 @@ const GadgetDetail = () => {
                                 </div>
                             </div>
                             <div className='flex gap-3'>
-                                <button className='bg-purple-600 flex items-center gap-3 text-white text-lg font-bold rounded-full px-5 py-3'>Add to cart <TiShoppingCart className='text-2xl'/></button>
-                                <button className='text-2xl px-5 py-3 border rounded-full'><IoHeartOutline/></button>
+                                <button onClick={() => addToCart(id)} className='bg-purple-600 flex items-center gap-3 text-white text-lg font-bold rounded-full px-5 py-3'>Add to cart <TiShoppingCart className='text-2xl'/></button>
+                                <button onClick={() => addToWishList(id)} className='text-2xl px-5 py-3 border rounded-full'><IoHeartOutline/></button>
                             </div>
                         </div>
                     </div>

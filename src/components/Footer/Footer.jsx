@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='bg-white'>
             <div className='footer max-w-6xl mx-auto flex flex-col items-center gap-2 md:gap-4 lg:gap-8 py-10 lg:py-24'>
                 <div className='flex flex-col gap-3 items-center'>
-                    <h2>Gadget World</h2>
+                    <h2>Gadget Haven</h2>
                     <p>Leading the way in cutting-edge technology and innovation.</p>
                 </div>
                 <div className='w-full border'></div>

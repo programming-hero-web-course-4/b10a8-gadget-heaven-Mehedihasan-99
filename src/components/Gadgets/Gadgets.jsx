@@ -2,15 +2,8 @@ import { useEffect, useState } from "react";
 import Gadget from "../Gadget/Gadget";
 
 
-const Gadgets = () => {
+const Gadgets = ({ gadgets}) => {
 
-    const [gadgets, setGadgets] = useState([])
-    useEffect(() => {
-        fetch('gadgetsData.json')
-        .then(res => res.json())
-        .then(data => setGadgets(data))
-    }, [])
-    
     return (
         <div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2  md:gap-6">

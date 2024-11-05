@@ -1,27 +1,13 @@
-import { useEffect, useState } from 'react';
 import './Category.css'
-import { data } from 'autoprefixer';
-const Category = () => {
 
-    const [gadgetData, setGadgetData] = useState([]);
 
-    useEffect(() => {
-        fetch(`gadgetsData.json`)
-            .then(res => res.json())
-            .then(data => setGadgetData(data))
-    }, [])
-    let categoryList = ["all"];
-    for (let i = 0; i < gadgetData.length; i++) {
-        let item = gadgetData[i].category;
-        if (!categoryList.includes(item)) {
-            categoryList = [...categoryList, item];
-        }
-    }
+const Category = ({ categoryList, filterCategoryGadgets, setGadgets,allGadgets }) => {
 
     return (
         <div className='category flex flex-col gap-4'>
+            <button onClick={() => setGadgets(allGadgets)}>All Products</button>
             {
-                categoryList.map((category, index) => <button key={index}>{category}</button>)
+                categoryList.map((category, index) => <button key={index}  onClick={() => filterCategoryGadgets(category)}>{category}</button>)
             }
         </div>
     );
