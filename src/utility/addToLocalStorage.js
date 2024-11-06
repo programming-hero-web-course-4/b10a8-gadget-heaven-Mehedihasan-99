@@ -1,3 +1,6 @@
+import { toast } from "react-toastify";
+
+
 const getStoredCartList = () => {
     const storedListStr = localStorage.getItem("cart-list");
     if (storedListStr) {
@@ -32,6 +35,7 @@ const removeCartList = (id) => {
     const newStoredList = storedList.filter(item => item !== id);
     const storedListStr = JSON.stringify(newStoredList);
     localStorage.setItem("cart-list", storedListStr);
+    toast.success("Remove item form CART")
 }
 
 const getStoredWishList = () => {
@@ -53,5 +57,7 @@ const addToWishList = (id) => {
         localStorage.setItem("wish-list", storedListStr);
     }
 }
+
+
 
 export { getStoredCartList, addToCart, getStoredWishList, addToWishList, removeWishList, removeCartList }

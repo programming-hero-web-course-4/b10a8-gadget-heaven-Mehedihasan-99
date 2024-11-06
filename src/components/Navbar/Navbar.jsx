@@ -2,6 +2,7 @@ import { IoMenuSharp, IoHeartOutline } from "react-icons/io5";
 import { TiShoppingCart } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 import { getStoredCartList, getStoredWishList } from "../../utility/addToLocalStorage";
+import Dashboard from "../Dashboard/Dashboard";
 
 
 const Navbar = () => {
@@ -41,14 +42,14 @@ const Navbar = () => {
                 <div className="navbar-end pr-4">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                         <div className="indicator bg-white p-2 rounded-full">
-                            <TiShoppingCart className="text-xl"></TiShoppingCart>
-                            <span className="badge badge-sm indicator-item">{cartList.length}</span>
+                            <NavLink to="/dashboard"><TiShoppingCart className="text-xl"></TiShoppingCart><span className="badge badge-sm indicator-item">{cartList.length}</span></NavLink>
                         </div>
                     </div>
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                         <div className="indicator bg-white p-2 rounded-full">
-                            <IoHeartOutline className="text-xl"></IoHeartOutline>
-                            <span className="badge badge-sm indicator-item">{wishlist.length}</span>
+                            <NavLink to="/dashboard"><IoHeartOutline className="text-xl"></IoHeartOutline>
+                                <span className="badge badge-sm indicator-item">{wishlist.length}</span></NavLink>
+
                         </div>
                     </div>
                 </div>

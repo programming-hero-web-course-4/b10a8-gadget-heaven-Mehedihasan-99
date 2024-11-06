@@ -1,18 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { IoIosStar, IoIosStarHalf, IoIosStarOutline } from "react-icons/io";
-import { IoHeartOutline } from "react-icons/io5";
+import { IoHeartOutline, IoHeart  } from "react-icons/io5";
 import { TiShoppingCart } from "react-icons/ti";
 import { addToCart, addToWishList, getStoredWishList } from '../../utility/addToLocalStorage';
+import { toast } from 'react-toastify';
+
 
 
 const GadgetDetail = () => {
 
+    const [again, setAgain] = useState(true)
+    const [wishlist, setWishlist] = useState(true)
     const { id } = useParams();
     const gadgets = useLoaderData();
 
     const gadget = gadgets.find(gadget => gadget.id == id);
     const { title, price, image, availability, specification, rating, description } = gadget;
+
+    const handleAddToCart = (id) => {
+        if(again){
+            addToCart(id);
+            toast.success("Adding item to Cart")
+            setAgain(false)
+            return
+        }
+        else{
+            toast("Already this item added Cart")
+            return 
+        }   
+    }
+
+    const handleAddToWishlist = (id) => {
+        if(wishlist){
+            addToWishList(id);
+            toast.success('Adding item to Wishlist');
+            setWishlist(false);
+            return
+        }
+        else{
+            toast('Already this item added to Wishlist');
+            return
+        }
+
+
+    }
 
     return (
         <div className=' mb-[780px] md:mb-72 lg:mb-96 bg-gray-200'>
@@ -51,8 +83,8 @@ const GadgetDetail = () => {
                                 </div>
                             </div>
                             <div className='flex gap-3'>
-                                <button onClick={() => addToCart(id)} className='bg-purple-600 flex items-center gap-3 text-white text-lg font-bold rounded-full px-5 py-3'>Add to cart <TiShoppingCart className='text-2xl'/></button>
-                                <button onClick={() => addToWishList(id)} className='text-2xl px-5 py-3 border rounded-full'><IoHeartOutline/></button>
+                                <button onClick={() => handleAddToCart(id)} className='bg-purple-600 flex items-center gap-3 text-white text-lg font-bold rounded-full px-5 py-3'>Add to cart <TiShoppingCart className='text-2xl'/></button>
+                                <button onClick={() => handleAddToWishlist(id)} className='text-2xl px-5 py-3 border rounded-full'>{wishlist ? <IoHeartOutline/> : <IoHeart className='text-red-500'/>}</button>
                             </div>
                         </div>
                     </div>

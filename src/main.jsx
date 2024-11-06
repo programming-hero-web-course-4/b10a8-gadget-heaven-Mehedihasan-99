@@ -7,21 +7,23 @@ import Home from './components/Home/Home.jsx'
 import Error from './components/Error/Error.jsx'
 import GadgetDetail from './components/GadgetDetail/GadgetDetail.jsx'
 import Dashboard from './components/Dashboard/Dashboard.jsx'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element:<MainLayout/>,
-    errorElement: <Error/>,
-    children:[
+    element: <MainLayout />,
+    errorElement: <Error />,
+    children: [
       {
         path: '/',
         element: <Home></Home>,
         loader: () => fetch('gadgetsData.json'),
       },
       {
-        path:'/gadget/:id',
-        element: <GadgetDetail/>,
+        path: '/gadget/:id',
+        element: <GadgetDetail />,
         loader: () => fetch('gadgetsData.json'),
       },
       {
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/Dashboard',
-        element: <Dashboard/>,
+        element: <Dashboard />,
         loader: () => fetch('gadgetsData.json'),
       }
     ]
@@ -40,5 +42,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
+    <ToastContainer />
   </StrictMode>,
 )

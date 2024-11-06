@@ -3,6 +3,10 @@ import { removeCartList } from "../../utility/addToLocalStorage";
 
 const Card = ({ item, AddToCart }) => {
     const { id, image, title, description, price } = item;
+
+
+
+    
     return (
         <div className='bg-white rounded-lg p-8 flex flex-col md:flex-row gap-8'>
             <img src={image} alt="" className='rounded-xl' />
