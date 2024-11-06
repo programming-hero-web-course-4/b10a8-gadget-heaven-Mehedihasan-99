@@ -36,6 +36,14 @@ const removeCartList = (id) => {
     const storedListStr = JSON.stringify(newStoredList);
     localStorage.setItem("cart-list", storedListStr);
     toast.success("Remove item form CART")
+};
+
+//remove all form cart
+const removeAllCart = () => {
+    const storedList = [];
+    const storedListStr = JSON.stringify(storedList);
+    localStorage.setItem("cart-list", storedListStr);
+    localStorage.setItem("wish-list", storedListStr);
 }
 
 const getStoredWishList = () => {
@@ -60,4 +68,4 @@ const addToWishList = (id) => {
 
 
 
-export { getStoredCartList, addToCart, getStoredWishList, addToWishList, removeWishList, removeCartList }
+export { getStoredCartList, addToCart, getStoredWishList, addToWishList, removeWishList, removeCartList, removeAllCart }
