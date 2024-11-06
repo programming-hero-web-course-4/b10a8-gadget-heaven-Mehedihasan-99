@@ -15,9 +15,9 @@ const GadgetDetail = () => {
     const { title, price, image, availability, specification, rating, description } = gadget;
 
     return (
-        <div className='pt-[68px] mb-[780px] md:mb-72 lg:mb-96 bg-gray-200'>
+        <div className=' mb-[780px] md:mb-72 lg:mb-96 bg-gray-200'>
             <div className='bg-purple-700 h-[400px]'>
-                <div className='p-4 lg:p-0 max-w-6xl mx-auto space-y-8'>
+                <div className='p-4 lg:p-8 max-w-6xl mx-auto space-y-8'>
                     <div className='space-y-4 text-center w-3/4 mx-auto'>
                         <h2 className='text-[32px] font-bold text-white'>Product Details</h2>
                         <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
@@ -29,7 +29,7 @@ const GadgetDetail = () => {
                                 <h2 className='text-3xl'>{title}</h2>
                                 <h3 className='text-xl'>Price: ${price}</h3>
                             </div>
-                            <button className='border border-green-500 rounded-full px-4'>{availability ? 'In Stock' : 'Out of Stock'}</button>
+                            <button className={ `border border-green-500 rounded-full px-4 ${availability ? 'text-green-400 border-green-400' : 'text-red-400 border-red-400'}`}>{availability ? 'In Stock' : 'Out of Stock'}</button>
                             <p>{description}</p>
                             <div className='space-y-3'>
                                 <h4 className='font-bold text-lg'>Specification:</h4>

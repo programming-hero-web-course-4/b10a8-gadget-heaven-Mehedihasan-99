@@ -18,36 +18,38 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar max-w-6xl mx-auto">
-            <div className="navbar-start px-2 md:px-6 lg:p-0">
-                <div className="dropdown md:hidden">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <IoMenuSharp className="text-2xl"></IoMenuSharp>
+        <div className="bg-white backdrop-blur-lg bg-opacity-10">
+            <div className="navbar max-w-6xl mx-auto">
+                <div className="navbar-start px-2 md:px-6 ">
+                    <div className="dropdown md:hidden">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <IoMenuSharp className="text-2xl"></IoMenuSharp>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            {links}
+                        </ul>
                     </div>
-                    <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <button className="btn btn-ghost text-xl font-bold p-0"><NavLink to="/">Gadget Haven</NavLink></button>
+                </div>
+                <div className="navbar-center hidden md:flex">
+                    <ul className="menu menu-horizontal px-1">
                         {links}
                     </ul>
                 </div>
-                <button className="btn btn-ghost text-xl font-bold p-0"><NavLink to="/">Gadget Haven</NavLink></button>
-            </div>
-            <div className="navbar-center hidden md:flex">
-                <ul className="menu menu-horizontal px-1">
-                    {links}
-                </ul>
-            </div>
-            <div className="navbar-end pr-4">
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-                    <div className="indicator bg-white p-2 rounded-full">
-                        <TiShoppingCart className="text-xl"></TiShoppingCart>
-                        <span className="badge badge-sm indicator-item">{cartList.length}</span>
+                <div className="navbar-end pr-4">
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                        <div className="indicator bg-white p-2 rounded-full">
+                            <TiShoppingCart className="text-xl"></TiShoppingCart>
+                            <span className="badge badge-sm indicator-item">{cartList.length}</span>
+                        </div>
                     </div>
-                </div>
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-                    <div className="indicator bg-white p-2 rounded-full">
-                        <IoHeartOutline className="text-xl"></IoHeartOutline>
-                        <span className="badge badge-sm indicator-item">{wishlist.length}</span>
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                        <div className="indicator bg-white p-2 rounded-full">
+                            <IoHeartOutline className="text-xl"></IoHeartOutline>
+                            <span className="badge badge-sm indicator-item">{wishlist.length}</span>
+                        </div>
                     </div>
                 </div>
             </div>

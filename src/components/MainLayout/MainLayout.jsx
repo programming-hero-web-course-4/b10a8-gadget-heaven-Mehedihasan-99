@@ -5,9 +5,9 @@ import { Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
     return (
-        <div className='bg-base-200'>
+        <div className='bg-base-200 '>
             <div className='relative'>
-                <div className='absolute w-full'><Navbar /></div>
+                <div className='sticky top-0 w-full'><Navbar /></div>
                 <div className='min-h-[calc(100vh-541px)]'>
                     <Outlet />
                 </div>

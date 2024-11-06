@@ -1,8 +1,8 @@
 
 const Banner = () => {
     return (
-        <div className="m-4 h-[470px] md:h-[550px] lg:h-[600px] mb-24 md:mb-56 lg:mb-[300px] bg-purple-700 rounded-xl">
-            <div className="max-w-5xl mx-auto flex flex-col gap-6 pt-28">
+        <div className="m-4 h-[430px] md:h-[500px] lg:h-[600px] w-11/12 lg:max-w-7xl mx-auto mb-24 md:mb-56 lg:mb-[300px] bg-purple-700 rounded-l">
+            <div className="max-w-5xl mx-auto flex flex-col gap-6 pt-4 lg:pt-12">
                 <div className="flex flex-col items-center md:w-10/12 mx-auto">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-6">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h2>
                     <p className="text-gray-200 md:w-3/4 mx-auto pb-2 mb-8">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
