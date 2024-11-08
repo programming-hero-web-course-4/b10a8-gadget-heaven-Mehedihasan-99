@@ -7,7 +7,7 @@ The "GADGET HAVEN" website is a React-based platform designed for the gadget pro
 ## Important links:
 
 - Website Live Link: [Website Live Link](https://gadget-haven-bd.surge.sh/)
-- Requirement Link: [Requirement Link](file:///G:/Projects/project8/B10-A8-gadget-heaven/Batch-10_Assignment-08.pdf)
+- Requirement Link: [Requirement Link](https://jade-ema-74.tiiny.site/)
 
 
 ## Key Features:
