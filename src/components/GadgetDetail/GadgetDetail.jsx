@@ -3,14 +3,14 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { IoIosStar, IoIosStarHalf, IoIosStarOutline } from "react-icons/io";
 import { IoHeartOutline, IoHeart  } from "react-icons/io5";
 import { TiShoppingCart } from "react-icons/ti";
-import { addToCart, addToWishList, getStoredWishList } from '../../utility/addToLocalStorage';
+import { addToCart, addToWishList } from '../../utility/addToLocalStorage';
 import { toast } from 'react-toastify';
 
 
 
 const GadgetDetail = () => {
 
-    const [again, setAgain] = useState(true)
+    const [added, setAdded] = useState(true)
     const [wishlist, setWishlist] = useState(true)
     const { id } = useParams();
     const gadgets = useLoaderData();
@@ -19,14 +19,14 @@ const GadgetDetail = () => {
     const { title, price, image, availability, specification, rating, description } = gadget;
 
     const handleAddToCart = (id) => {
-        if(again){
+        if(added){
             addToCart(id);
-            toast.success("Adding item to Cart")
-            setAgain(false)
+            toast.success("Adding item to Cart details jsx 24")
+            setAdded(false)
             return
         }
         else{
-            toast("Already this item added Cart")
+            toast("Already this item added Cart details jsx 24")
             return 
         }   
     }
@@ -34,12 +34,12 @@ const GadgetDetail = () => {
     const handleAddToWishlist = (id) => {
         if(wishlist){
             addToWishList(id);
-            toast.success('Adding item to Wishlist');
+            toast.success('Adding item to Wishlist details jsx 24');
             setWishlist(false);
             return
         }
         else{
-            toast('Already this item added to Wishlist');
+            toast('Already this item added to Wishlist details jsx 24');
             return
         }
 

@@ -8,7 +8,7 @@ const Gadget = ({ gadget }) => {
             <div className="space-y-4">
                 <div className="space-y-3">
                     <h2 className="text-2xl font-semibold">{title}</h2>
-                    <h2 className="text-xl font-medium text-gray-300"> Price:{price}</h2>
+                    <h2 className="text-xl font-medium"> Price: ${price}</h2>
                 </div>
                 <button className="border-2 border-purple-600 text-purple-600 px-3 py-1 rounded-3xl"><Link to={`/gadget/${id}`}>View Details</Link></button>
             </div>

@@ -9,6 +9,7 @@ import GadgetDetail from './components/GadgetDetail/GadgetDetail.jsx'
 import Dashboard from './components/Dashboard/Dashboard.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Statistics from './components/Statistics/Statistics.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,23 +19,28 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>,
-        loader: () => fetch('gadgetsData.json'),
+        element: <Home />,
+        loader: () => fetch('../gadgetsData.json'),
       },
       {
         path: '/gadget/:id',
         element: <GadgetDetail />,
-        loader: () => fetch('gadgetsData.json'),
+        loader: () => fetch('../gadgetsData.json'),
       },
       {
         path: '/statistics',
-        element: <h2>Statistics</h2>,
+        element: <Statistics/>,
+        loader: () => fetch('../gadgetsData.json'),
       },
       {
-        path: '/Dashboard',
+        path: '/dashboard',
         element: <Dashboard />,
-        loader: () => fetch('gadgetsData.json'),
-      }
+        loader: () => fetch('../gadgetsData.json'),
+      },
+      {
+        path: '/feedback',
+        element: <h2>Coustomer Feedback</h2>,
+      },
     ]
   },
 ]);
@@ -42,6 +48,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
-    <ToastContainer />
+    <ToastContainer
+      position="top-center"
+      autoClose={3000}
+    />
   </StrictMode>,
 )

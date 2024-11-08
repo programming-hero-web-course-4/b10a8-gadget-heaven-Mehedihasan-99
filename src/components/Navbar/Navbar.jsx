@@ -11,6 +11,7 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/statistics">Statistics</NavLink></li>
         <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        <li><NavLink to="/feedback">Feedback</NavLink></li>
     </>
 
     const cartList = getStoredCartList();
@@ -28,7 +29,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-30 p-2 shadow">
                             {links}
                         </ul>
                     </div>
@@ -42,14 +43,15 @@ const Navbar = () => {
                 <div className="navbar-end pr-4">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                         <div className="indicator bg-white p-2 rounded-full">
-                            <NavLink to="/dashboard"><TiShoppingCart className="text-xl"></TiShoppingCart><span className="badge badge-sm indicator-item">{cartList.length}</span></NavLink>
+                            <NavLink to="/dashboard"><TiShoppingCart className="text-xl"></TiShoppingCart><span className={`badge badge-sm indicator-item ${cartList.length < 1 ? 'hidden' : 'flex'}`}>{cartList.length}</span></NavLink>
+
                         </div>
                     </div>
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                         <div className="indicator bg-white p-2 rounded-full">
                             <NavLink to="/dashboard"><IoHeartOutline className="text-xl"></IoHeartOutline>
-                                <span className="badge badge-sm indicator-item">{wishlist.length}</span></NavLink>
-
+                                <span className={`badge badge-sm indicator-item ${wishlist.length < 1 ? 'hidden' : 'flex'}`}>{wishlist.length}</span>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

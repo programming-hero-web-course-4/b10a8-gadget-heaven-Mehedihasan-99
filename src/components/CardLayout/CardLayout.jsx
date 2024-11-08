@@ -49,7 +49,7 @@ const CardLayout = () => {
                     <div className={`${noData ? 'flex' : 'hidden'}`}>
                         <Gadgets gadgets={gadgets} />
                     </div>
-                    <h2 className={`${noData ? 'hidden':'flex text-6xl font-bold text-purple-700'}`}>No Data Found</h2>
+                    <h2 className={`${noData ? 'hidden':'flex text-4xl md:text-6xl font-bold text-purple-700'}`}>No Data Found</h2>
                 </div>
             </div>
         </div>

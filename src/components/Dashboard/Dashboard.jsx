@@ -28,7 +28,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="w-11/12 mx-auto">
-                {showList ? <CartList></CartList> : <WishLists />}
+                {showList ? <CartList /> : <WishLists />}
             </div>
         </div>
     );

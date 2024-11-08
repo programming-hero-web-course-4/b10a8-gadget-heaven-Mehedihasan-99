@@ -14,7 +14,7 @@ const Category = ({ categoryList, filterCategoryGadgets, setGadgets, allGadgets,
 
     return (
         <div className='category flex flex-col gap-4'>
-            <button onClick={() =>handleAllBtn(allGadgets)}>All Products</button>
+            <button onClick={() => handleAllBtn(allGadgets)}>All Products</button>
             {
                 categoryList.map((category, index) => <button key={index} onClick={() => handleCategory(category)}>{category}</button>)
             }
