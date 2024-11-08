@@ -10,6 +10,7 @@ import Dashboard from './components/Dashboard/Dashboard.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Statistics from './components/Statistics/Statistics.jsx'
+import Feedback from './components/Dashboard/Feedback/Feedback.jsx'
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/feedback',
-        element: <h2>Coustomer Feedback</h2>,
+        element: <Feedback/>,
       },
     ]
   },
