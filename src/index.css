@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+body{
+    font-family: "Sora", sans-serif;
+}
+
 p{
     color: rgb(165, 162, 162);
     text-align: center;

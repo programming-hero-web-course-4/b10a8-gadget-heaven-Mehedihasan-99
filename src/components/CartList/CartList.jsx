@@ -20,8 +20,16 @@ const CartList = () => {
     };
 
     const handlePurchase = () => {
-        removeAllCart()
-        document.getElementById('my_modal_5').showModal();
+        if (storedCartList.length > 0) {
+            removeAllCart();
+            document.getElementById('my_modal_5').showModal();
+            return;
+        }
+        else {
+            document.getElementById('my_modal_1').showModal();
+            return
+        }
+
     }
 
     return (
@@ -40,7 +48,7 @@ const CartList = () => {
                 }
             </div>
 
-            {/* modal */}
+            {/* modal purchase successfull */}
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
                     <img src={group} alt="" className="w-6 md:w-10 mx-auto pb-4" />
@@ -48,6 +56,18 @@ const CartList = () => {
                     <div className="divider my-1 md:my-4"></div>
                     <h3 className="text-center text-xs md:text-xl pb-1">Thanks for purchasing</h3>
                     <h4 className="text-center text-xs md:text-base font-bold pb-3 md:pb-8">Total cost:${totalPrice}</h4>
+                    <div className="modal-action">
+                        <form method="dialog">
+                            <button className="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+            {/* modal cart empty */}
+            <dialog id="my_modal_1" className="modal">
+                <div className="modal-box flex flex-col items-center">
+                    <h3 className="font-bold text-xl">Your cart is empty !!</h3>
+                    <h3 className="font-semibold text-lg">Please add to cart before purchase</h3>
                     <div className="modal-action">
                         <form method="dialog">
                             <button className="btn">Close</button>
