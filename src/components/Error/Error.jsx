@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Error = () => {
+
+    useEffect(() => {
+        document.title = " Gadget Haven | Error"
+    })
+
     return (
         <div className='pt-32'>
             <div className="flex flex-col items-center gap-5 border rounded-xl w-1/3 mx-auto p-10 bg-slate-100">

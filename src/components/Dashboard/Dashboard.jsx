@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CartList from "../CartList/CartLIst";
 import WishLists from "../WishLists/WishLists";
 
 const Dashboard = () => {
+
+    useEffect(() => {
+        document.title = " Gadget Haven | Dashboard"
+    })
 
     const [showList, setShowList] = useState(true);
 

@@ -10,6 +10,8 @@ The "GADGET HAVEN" website is a React-based platform designed for the gadget pro
 - Requirement Link: [Requirement Link](https://jade-ema-74.tiiny.site/)
 
 
+## Storage use: local Storege used.
+
 ## Key Features:
 
 - User-Friendly Interface : Intuitive navigation and clean design for easy browsing. Categories like Smartphones, Laptops, Smart Home, Wearables, Gaming, etc., for quick access to products. 

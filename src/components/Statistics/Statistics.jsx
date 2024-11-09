@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import Recharts from "../Recharts/Recharts";
 
 const Statistics = () => {
+
+    useEffect(() => {
+        document.title = " Gadget Haven | Statistics"
+    })
 
     return (
         <div className='max-w-7xl mx-auto space-y-4 lg:space-y-12 mb-5 md:mb-10 lg:mb-24'>

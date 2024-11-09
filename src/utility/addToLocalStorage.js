@@ -18,6 +18,12 @@ const addToCart = (id) => {
         storedList.push(id);
         const storedListStr = JSON.stringify(storedList);
         localStorage.setItem("cart-list", storedListStr);
+        toast.success("Adding item to Cart");
+        return;
+    }
+    else {
+        toast("Already this item added Cart details jsx 24")
+        return;
     }
 }
 
@@ -63,6 +69,7 @@ const addToWishList = (id) => {
         storedList.push(id);
         const storedListStr = JSON.stringify(storedList);
         localStorage.setItem("wish-list", storedListStr);
+        toast.success('Adding item to Wishlist');
     }
 }
 

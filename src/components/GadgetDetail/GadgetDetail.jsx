@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { IoIosStar, IoIosStarHalf, IoIosStarOutline } from "react-icons/io";
 import { IoHeartOutline, IoHeart  } from "react-icons/io5";
 import { TiShoppingCart } from "react-icons/ti";
 import { addToCart, addToWishList } from '../../utility/addToLocalStorage';
-import { toast } from 'react-toastify';
-
-
 
 const GadgetDetail = () => {
 
-    const [added, setAdded] = useState(true)
+    const [isDisable, setIsDisable] = useState(false)
     const [wishlist, setWishlist] = useState(true)
     const { id } = useParams();
     const gadgets = useLoaderData();
@@ -18,32 +15,24 @@ const GadgetDetail = () => {
     const gadget = gadgets.find(gadget => gadget.id == id);
     const { title, price, image, availability, specification, rating, description } = gadget;
 
+    useEffect(() => {
+        document.title = ` Gadget Haven | gadget: ${id}`
+    })
+
     const handleAddToCart = (id) => {
-        if(added){
+        if(!isDisable){
             addToCart(id);
-            toast.success("Adding item to Cart details jsx 24")
-            setAdded(false)
+            setIsDisable(true)
             return
-        }
-        else{
-            toast("Already this item added Cart details jsx 24")
-            return 
-        }   
+        } 
     }
 
     const handleAddToWishlist = (id) => {
         if(wishlist){
             addToWishList(id);
-            toast.success('Adding item to Wishlist details jsx 24');
             setWishlist(false);
             return
-        }
-        else{
-            toast('Already this item added to Wishlist details jsx 24');
-            return
-        }
-
-
+        };
     }
 
     return (
@@ -83,7 +72,7 @@ const GadgetDetail = () => {
                                 </div>
                             </div>
                             <div className='flex gap-3'>
-                                <button onClick={() => handleAddToCart(id)} className='bg-purple-600 flex items-center gap-3 text-white text-lg font-bold rounded-full px-5 py-3'>Add to cart <TiShoppingCart className='text-2xl'/></button>
+                                <button onClick={() => handleAddToCart(id)} disabled={isDisable} className='bg-purple-600 flex items-center gap-3 text-white text-lg font-bold rounded-full px-5 py-3'>Add to cart <TiShoppingCart className='text-2xl'/></button>
                                 <button onClick={() => handleAddToWishlist(id)} className='text-2xl px-5 py-3 border rounded-full'>{wishlist ? <IoHeartOutline/> : <IoHeart className='text-red-500'/>}</button>
                             </div>
                         </div>

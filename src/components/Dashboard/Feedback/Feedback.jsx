@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FeedbackForm from '../../FeedbackForm/FeedbackForm';
 
 const Feedback = () => {
+
+    useEffect(() => {
+        document.title = " Gadget Haven | Feedback"
+    })
+
     return (
         <div className='max-w-7xl mx-auto space-y-4 lg:space-y-12 mb-5 md:mb-10 lg:mb-24'>
             <div className="max-w-7xl mx-auto bg-purple-600 py-8">
